@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-weight: normal;
+    font-size: 62.5%;
+    color: $default;
+}
+
+body {
+    font-size: 11px;
+
+    @media #{$wide} {
+        font-size: 1.3rem;
+    }
+}
+
+h2 {
+    font-size: 3.4rem;
+    letter-spacing: 0.7rem;
+    font-weight: inherit;
+    text-align: center;
+    margin-bottom: 7rem;
+    margin-top: 5rem;
+    color: $secondary;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    padding-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+}

@@ -1,0 +1,44 @@
+.l-contact {
+    @include grid;
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+
+
+}
+
+.c-contact {
+
+    &__call,
+    &__write,
+    &__visit {
+        font-size: 3rem;
+        margin-top: 2rem;
+        color: $secondary;
+        font-weight: bold;
+    }
+
+    @media #{$small-tablet} {
+        grid-column: span 6;
+
+        &:last-child {
+            grid-column: span 12;
+        }
+    }
+
+
+    @media #{$wide} {
+        grid-column: span 4;
+
+        &:last-child {
+            grid-column: span 4;
+        }
+
+    }
+
+}
+
+.c-map {
+    @include center;
+    margin-top: 2rem;
+}

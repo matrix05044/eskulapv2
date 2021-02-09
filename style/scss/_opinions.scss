@@ -1,0 +1,46 @@
+.l-opinions {
+    overflow: hidden;
+}
+
+
+.c-opinions-wrapper {
+    display: inline-flex;
+    transition: transform 1s;
+    height: 100%;
+    overflow-x: hidden;
+
+    &__item {
+        width: 100vw;
+        padding: 2rem;
+    }
+
+    &__opinion {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__author {
+        text-align: end;
+    }
+
+    @media #{$small-tablet} {
+
+        &__item {
+            padding: 0 20rem;
+        }
+    }
+
+    @media #{$laptop} {
+
+        &__item {
+            padding: 0 30rem;
+        }
+    }
+
+    @media #{$wide} {
+
+        &__item {
+            padding: 0 50rem;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.c-cards {
+    @include grid;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    &__card {
+        height: 40rem;
+        width: 100%;
+        max-width: 37rem;
+        position: relative;
+        color: white;
+
+        &:nth-child(1) {
+            background: url('./../../assets/pic1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(2) {
+            background: url('./../../assets/pic2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(3) {
+            background: url('./../../assets/3pic.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(4) {
+            background: url('./../../assets/pic2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+    }
+
+    &__more {
+        position: absolute;
+        bottom: 0;
+        padding: 2rem;
+        background-color: rgba($color: #666, $alpha: 0.9);
+        height: 40%;
+
+    }
+
+    &__desc {
+        color: rgba($color: #fff, $alpha: 0.9);
+    }
+
+
+}

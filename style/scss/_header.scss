@@ -1,0 +1,255 @@
+.l-header {
+    max-width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 1rem;
+
+}
+
+.c-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    width: 100vw;
+
+    &__img {
+        width: 100%;
+
+    }
+}
+
+.c-menu {
+    position: absolute;
+    width: 25rem;
+    background-color: white;
+    height: 50rem;
+    text-align: center;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    background-color: rgb(240, 232, 232);
+    padding: 2rem 1rem;
+    transition: transform .3s ease-in-out;
+    grid-column: 2/3;
+
+    &--disactive {
+        transform: translateX(25rem);
+    }
+
+    @media #{$laptop} {
+        position: static;
+        background-color: transparent;
+        width: 100%;
+        transform: translateX(0);
+        height: 100%;
+    }
+}
+
+.c-socials {
+    @include center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+
+    &__link {
+        padding: 1rem 1.5rem;
+    }
+
+    @media #{$laptop} {
+        display: none;
+    }
+}
+
+.c-menu-nav {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+
+    &__item {
+        padding: 1.5rem 0;
+    }
+
+    &__link {
+        padding: 1rem 0;
+
+        &--active {
+            border-bottom: 1px solid $default;
+        }
+    }
+
+    @media #{$laptop} {
+        display: flex;
+        justify-content: space-between;
+        font-size: .9rem;
+        padding: 0 3rem;
+        font-weight: bold;
+
+        &__link {
+            padding: 1rem;
+
+            &:hover {
+                border-bottom: 1px solid $default;
+            }
+        }
+    }
+
+    @media #{$wide} {
+        padding: 0 10% 0 20%;
+    }
+}
+
+.c-contact-ham {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    @media #{$laptop} {
+        display: none;
+    }
+}
+
+
+.c-hamburger {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: white;
+    color: $default;
+    border: 0;
+    margin: 0;
+    transition: transform .3s ease-in-out;
+
+    &--active {
+        transform: translate(-25rem);
+    }
+
+    &__box {
+        width: 35px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+    }
+
+
+    &__inner {
+        @include hamburger-line;
+
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background .3s ease-in-out;
+
+        &--active {
+            background-color: transparent;
+        }
+    }
+
+    &__inner::before,
+    &__inner::after {
+        @include hamburger-line;
+
+        content: '';
+        left: 0;
+        transition: transform .3s ease-in-out;
+    }
+
+    &__inner::before {
+        top: -10px;
+    }
+
+    &__inner--active::before {
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    &__inner::after {
+        top: 10px;
+    }
+
+    &__inner--active::after {
+        transform: translateY(-10px) rotate(45deg);
+    }
+
+    @media #{$laptop} {
+        display: none;
+    }
+}
+
+.c-header-section {
+    @include grid;
+    position: relative;
+    height: 100%;
+
+    &__title {
+        font-size: calc(24px + (43 - 24) * ((100vw - 300px) / (1600 - 300)));
+        padding: 2rem;
+        font-weight: normal;
+        color: $secondary;
+    }
+
+    &__number-wrapper {
+        font-size: calc(24px + (50 - 24) * ((100vw - 300px) / (1600 - 300)));
+        margin-top: 5rem;
+        position: relative;
+        text-align: center;
+    }
+
+    &__phone-icon {
+        position: absolute;
+        top: -3rem;
+        transform: translateX(-50%);
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    @media #{$small-tablet} {
+
+        &__title {
+            grid-column: span 7;
+            align-self: center;
+        }
+
+        &__number-wrapper {
+            grid-column: span 8;
+            grid-row: 2;
+        }
+
+        &__img-wrapper {
+            position: absolute;
+            right: -20rem;
+            height: 100%;
+        }
+
+        &__img {
+            object-fit: scale-down;
+            height: 100%;
+        }
+
+        @media #{$laptop} {
+
+            &__title {
+                grid-column: 2/9;
+            }
+
+            &__img-wrapper {
+                right: -40rem;
+            }
+        }
+
+        @media #{$wide} {
+            &__title {
+                grid-column: 2/10;
+            }
+        }
+
+        @media #{$super-wide} {
+            &__title {
+                grid-column: 2/8;
+            }
+        }
+    }
+
+}

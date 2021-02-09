@@ -1,0 +1,46 @@
+@mixin hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: $default;
+    position: absolute;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
+    gap: 3rem;
+
+    &>* {
+        grid-column: span 12;
+    }
+
+    @media #{$small-tablet} {
+        grid-template-columns: repeat(12, 1fr);
+
+        &>* {
+            grid-column: span 6;
+        }
+    }
+
+    @media #{$laptop} {
+        grid-template-columns: repeat(12, 1fr);
+
+        &>* {
+            grid-column: span 4;
+        }
+    }
+
+    @media #{$wide} {
+        grid-template-columns: repeat(12, 1fr);
+
+        &>* {
+            grid-column: span 3;
+        }
+    }
+}
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
