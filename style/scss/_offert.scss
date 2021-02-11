@@ -68,6 +68,11 @@
 
         &__card:hover &__desc {
             overflow: visible;
+
+            display: -webkit-box;
+            -webkit-line-clamp: unset;
+
+
         }
     }
 }

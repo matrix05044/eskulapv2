@@ -1,25 +1,3 @@
-body {
-    overflow-x: hidden;
-    padding-top: 1rem;
-}
-
-.c-menu {
-    height: 100vh;
-
-    @media #{$laptop} {
-        height: auto;
-    }
-}
-
-.c-header-section {
-
-    &__title {
-        grid-column: 1/13;
-        grid-row: 1;
-        font-size: calc(50px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
-    }
-}
-
 .c-about {
     display: flex;
     justify-content: center;
@@ -47,7 +25,6 @@ body {
 
     &__text {
         padding: 2%;
-        max-width: 50%;
     }
 
     @media #{$laptop} {

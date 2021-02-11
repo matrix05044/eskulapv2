@@ -53,18 +53,18 @@ const moveMenu = () => {
   bg.classList.toggle('bg-menu--active');
 };
 
-menuItems.forEach((item) => {
-  item.addEventListener(
-    'click',
-    (elem) => {
-      menuItems.forEach((element) => {
-        element.classList.remove('c-menu-nav__link--active');
-      });
-      elem.target.classList.add('c-menu-nav__link--active');
-    },
-    false
-  );
-});
+// menuItems.forEach((item) => {
+//   item.addEventListener(
+//     'click',
+//     (elem) => {
+//       menuItems.forEach((element) => {
+//         element.classList.remove('c-menu-nav__link--active');
+//       });
+//       elem.target.classList.add('c-menu-nav__link--active');
+//     },
+//     false
+//   );
+// });
 
 bg.addEventListener('click', moveMenu, false);
 hamburger.addEventListener('click', moveMenu, false);
