@@ -1,0 +1,89 @@
+body {
+  overflow-x: hidden;
+  padding-top: 1rem;
+}
+
+.c-menu {
+  height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .c-menu {
+    height: auto;
+  }
+}
+
+.c-header-section__title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-size: calc(50px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.c-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-about__img-wrapper {
+  background: url("./../../assets/eskulap.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 40rem;
+  min-height: 35rem;
+  display: none;
+  position: relative;
+}
+
+.c-about__img-more {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  background-color: rgba(102, 102, 102, 0.9);
+  width: 100%;
+  color: white;
+}
+
+.c-about__text {
+  padding: 2%;
+  max-width: 50%;
+}
+
+@media (min-width: 1024px) {
+  .c-about {
+    padding: 5rem;
+  }
+  .c-about__img-wrapper {
+    display: block;
+  }
+  .c-about__text {
+    width: 70%;
+  }
+}
+
+.l-hours {
+  text-align: center;
+}
+
+.c-hours {
+  -webkit-columns: 2;
+          columns: 2;
+  margin-bottom: 5rem;
+  max-width: 50rem;
+  display: inline-block;
+}
+
+.c-hours__item {
+  margin-bottom: 2rem;
+}
+
+.c-cards {
+  margin-bottom: 5rem;
+}
+/*# sourceMappingURL=subpages.css.map */

@@ -1,0 +1,82 @@
+body {
+    overflow-x: hidden;
+    padding-top: 1rem;
+}
+
+.c-menu {
+    height: 100vh;
+
+    @media #{$laptop} {
+        height: auto;
+    }
+}
+
+.c-header-section {
+
+    &__title {
+        grid-column: 1/13;
+        grid-row: 1;
+        font-size: calc(50px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
+    }
+}
+
+.c-about {
+    display: flex;
+    justify-content: center;
+
+
+    &__img-wrapper {
+        background: url('./../../assets/eskulap.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-width: 40rem;
+        min-height: 35rem;
+        display: none;
+        position: relative;
+
+    }
+
+    &__img-more {
+        position: absolute;
+        bottom: 0;
+        padding: 2rem;
+        background-color: rgba($color: #666, $alpha: 0.9);
+        width: 100%;
+        color: white;
+    }
+
+    &__text {
+        padding: 2%;
+        max-width: 50%;
+    }
+
+    @media #{$laptop} {
+
+        padding: 5rem;
+
+        &__img-wrapper {
+            display: block;
+        }
+
+        &__text {
+            width: 70%;
+        }
+    }
+}
+
+
+
+.l-hours {
+    text-align: center;
+}
+
+.c-hours {
+    columns: 2;
+    margin-bottom: 5rem;
+    max-width: 50rem;
+    display: inline-block;
+
+    &__item {
+        margin-bottom: 2rem;
+    }
+}

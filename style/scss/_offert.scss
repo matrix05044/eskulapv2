@@ -39,16 +39,35 @@
 
     &__more {
         position: absolute;
+        cursor: pointer;
+        overflow: hidden;
         bottom: 0;
         padding: 2rem;
         background-color: rgba($color: #666, $alpha: 0.9);
         height: 40%;
-
+        transition: height .2s;
     }
 
     &__desc {
-        color: rgba($color: #fff, $alpha: 0.9);
+        color: rgb(230, 230, 230);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
     }
 
 
+    @media #{$laptop} {
+
+        &__card:hover &__more {
+            height: 100%;
+
+        }
+
+        &__card:hover &__desc {
+            overflow: visible;
+        }
+    }
 }
