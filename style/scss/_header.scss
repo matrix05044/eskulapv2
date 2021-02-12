@@ -4,7 +4,8 @@
     position: relative;
     overflow: hidden;
     padding-top: 1rem;
-
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(206, 195, 195, 1) 100%);
 }
 
 .c-nav {
@@ -134,8 +135,8 @@
     padding: 10px;
     display: inline-block;
     cursor: pointer;
-    background-color: white;
-    color: $default;
+    background-color: transparent;
+    color: white;
     border: 0;
     margin: 0;
     z-index: 99;
@@ -196,33 +197,61 @@
     }
 }
 
+.l-header-section-wrapper {
+    height: 80%;
+    display: inline-flex;
+    transition: transform 1s ease-in-out;
+
+}
+
 .c-header-section {
     @include grid;
     position: relative;
     height: 100%;
+    width: 100vw;
+    overflow: hidden;
 
-    &__title {
-        font-size: calc(24px + (43 - 24) * ((100vw - 300px) / (1600 - 300)));
-        padding: 2rem;
-        font-weight: normal;
-        color: $secondary;
+
+    &:nth-child(2) {
+        .c-header-section__title {
+            font-size: calc(28px + (77 - 28) * ((100vw - 300px) / (1600 - 300)));
+
+            color: white;
+        }
     }
 
-    &__number-wrapper {
-        font-size: calc(24px + (50 - 24) * ((100vw - 300px) / (1600 - 300)));
-        margin-top: 5rem;
-        position: relative;
+    &:nth-child(3) {
+        .c-header-section__title {
+            font-size: calc(36px + (77 - 36) * ((100vw - 300px) / (1600 - 300)));
+            color: #650008;
+            text-align: start;
+            padding-left: 3%;
+        }
+    }
+
+    &__title {
+        font-size: calc(42px + (77 - 42) * ((100vw - 300px) / (1600 - 300)));
+        padding-top: 2rem;
+        font-weight: bold;
+        color: #002751;
+        letter-spacing: .7rem;
+        z-index: 5;
         text-align: center;
     }
 
-    &__phone-icon {
+    &__img-wrapper {
         position: absolute;
-        top: -3rem;
-        transform: translateX(-50%);
+        opacity: 40%;
+
+        &:nth-child(2) {
+            height: 60vh;
+            top: 5rem;
+        }
+
     }
 
     &__img {
-        width: 100%;
+        height: 100%;
     }
 
     @media #{$small-tablet} {
@@ -283,7 +312,39 @@
             margin-top: 0;
         }
     }
+}
 
+.c-header-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 7rem;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin-top: 44rem;
+    color: rgb(37, 37, 37);
+    z-index: 2;
+
+
+    &__item {
+        padding: .5rem 1rem;
+    }
+}
+
+.c-phone-wrapper {
+    background-color: #650008;
+    width: 100%;
+    height: 3rem;
+    z-index: 2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5rem;
+
+    &__number {
+        margin-left: 1rem;
+    }
 }
 
 .bg-menu {

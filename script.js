@@ -1,29 +1,38 @@
-function slider() {
-  const opinionWrapper = document.querySelector('.c-opinions-wrapper');
-  const opinionElements = opinionWrapper.querySelectorAll(
-    '.c-opinions-wrapper__item'
-  );
-  const elemWidth = opinionElements[0].offsetWidth;
-  let counter = 1;
-  let offset = elemWidth;
+// opinions
+
+const opinionWrapper = document.querySelector('.c-opinions-wrapper');
+const opinionElements = opinionWrapper.querySelectorAll(
+  '.c-opinions-wrapper__item'
+);
+
+//leyout
+const wrapperLeyout = document.querySelector('.l-header-section-wrapper');
+const wrapperItem = Array.from(
+  wrapperLeyout.querySelectorAll('.c-header-section')
+);
+
+let counter = 1;
+
+function slider(wrapper, wapperItem) {
+  let offset = wapperItem[0].offsetWidth;
 
   const swapLeft = (counter) => {
-    opinionWrapper.style.transform = `translate(-${offset}px)`;
-    offset = offset + elemWidth;
+    wrapper.style.transform = `translate(-${offset}px)`;
+    offset = offset + wapperItem[0].offsetWidth;
   };
 
   const swapRight = () => {
-    opinionWrapper.style.transform = `translate(-${offset}px)`;
-    offset = offset - elemWidth;
+    wrapper.style.transform = `translate(-${offset}px)`;
+    offset = offset - wapperItem[0].offsetWidth;
   };
 
   const changing = () => {
-    if (counter < opinionElements.length - 1) {
+    if (counter < wrapperItem.length - 1) {
       swapLeft();
       counter++;
     } else if (
-      counter > opinionElements.length - 2 &&
-      counter < opinionElements.length * 2 - 2
+      counter > wrapperItem.length - 2 &&
+      counter < wrapperItem.length * 2 - 2
     ) {
       swapRight();
       counter++;
@@ -39,6 +48,9 @@ function slider() {
   sliding();
 }
 
+slider(wrapperLeyout, wrapperItem);
+slider(opinionWrapper, opinionElements);
+
 const hamburger = document.querySelector('.c-hamburger');
 const menu = hamburger.nextElementSibling;
 const hamburgerItem = hamburger.querySelector('.c-hamburger__inner');
@@ -53,20 +65,44 @@ const moveMenu = () => {
   bg.classList.toggle('bg-menu--active');
 };
 
-// menuItems.forEach((item) => {
-//   item.addEventListener(
-//     'click',
-//     (elem) => {
-//       menuItems.forEach((element) => {
-//         element.classList.remove('c-menu-nav__link--active');
-//       });
-//       elem.target.classList.add('c-menu-nav__link--active');
-//     },
-//     false
-//   );
-// });
-
 bg.addEventListener('click', moveMenu, false);
 hamburger.addEventListener('click', moveMenu, false);
 
 slider();
+
+// const wrapper = document.querySelector('.l-header-section-wrapper');
+// const wrapperItem = wrapper.querySelectorAll('c-header-sectio');
+// const elemWidth = wrapperItem[0].offsetWidth;
+// let counter = 1;
+// let offset = elemWidth;
+
+// const swapLeft = (counter) => {
+//   wrapper.style.transform = `translate(-${offset}px)`;
+//   offset = offset + elemWidth;
+// };
+
+// const swapRight = () => {
+//   wrapper.style.transform = `translate(-${offset}px)`;
+//   offset = offset - elemWidth;
+// };
+
+// const changing = () => {
+//   if (counter < wrapperItem.length - 1) {
+//     swapLeft();
+//     counter++;
+//   } else if (
+//     counter > wrapperItem.length - 2 &&
+//     counter < wrapperItem.length * 2 - 2
+//   ) {
+//     swapRight();
+//     counter++;
+//   } else {
+//     counter = 0;
+//   }
+// };
+
+// const leyaouSlider = () => {
+//   setInterval(changing, 5000);
+// };
+
+// leyaouSlider();
