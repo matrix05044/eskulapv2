@@ -209,7 +209,7 @@
     position: relative;
     height: 100%;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 
 
     &:nth-child(2) {
@@ -320,7 +320,8 @@
     height: 7rem;
     font-size: 1.2rem;
     justify-content: center;
-    margin-top: 35rem;
+    position: absolute;
+    bottom: 5%;
     color: rgb(37, 37, 37);
     z-index: 2;
 

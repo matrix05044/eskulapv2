@@ -313,7 +313,7 @@ p {
   position: relative;
   height: 100%;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .c-header-section > * {
@@ -457,7 +457,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 35rem;
+  position: absolute;
+  bottom: 5%;
   color: #252525;
   z-index: 2;
 }
