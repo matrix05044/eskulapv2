@@ -3,9 +3,10 @@
     margin-left: 5%;
     margin-right: 5%;
 
+
     &__card {
         height: 40rem;
-        width: 100%;
+        min-width: 100%;
         max-width: 37rem;
         position: relative;
         color: white;
@@ -45,6 +46,7 @@
         padding: 2rem;
         background-color: rgba($color: #666, $alpha: 0.9);
         height: 40%;
+        width: 100%;
         transition: height .2s;
     }
 
@@ -58,6 +60,9 @@
         -webkit-box-orient: vertical;
     }
 
+    @media (max-width: 480px) {
+        column-gap: 0;
+    }
 
     @media #{$laptop} {
 

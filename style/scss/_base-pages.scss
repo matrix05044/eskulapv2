@@ -4,6 +4,17 @@
     position: relative;
 }
 
+.c-hamburger__inner::after,
+.c-hamburger__inner::before,
+.c-hamburger__inner {
+    background-color: $default;
+}
+
+.c-hamburger__inner--active::after,
+.c-hamburger__inner--active::before {
+    background-color: white;
+}
+
 .c-menu {
     overflow: hidden;
 
@@ -17,6 +28,7 @@
         height: auto;
         width: 100%;
         padding: 2rem 1rem;
+        color: $default;
     }
 }
 
@@ -26,9 +38,9 @@
 
 
     &__title {
-        grid-column: 1/13;
-        grid-row: 1;
+        color: $secondary;
         font-size: calc(50px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
+        margin: 2rem 0;
     }
 }
 

@@ -1,0 +1,72 @@
+.c-pricer {
+
+    &__title {
+        font-size: 2.8rem;
+    }
+
+    &__item-title-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: $default;
+        padding: 1rem;
+        color: white;
+        cursor: pointer;
+        margin-top: 2rem;
+        transition: border-radius .5s;
+
+        &--active {
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    &__item-title {
+        padding: 0;
+        pointer-events: none;
+    }
+
+    &__item-title-icon {
+        transition: transform 0.5s;
+        pointer-events: none;
+
+        &--active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__sub-item {
+        padding: 1rem 1rem;
+        font-size: 1.2rem;
+        background-color: rgb(219, 219, 219);
+        display: flex;
+        justify-content: space-between;
+
+
+        &:nth-child(2n) {
+            background-color: rgb(161, 161, 161);
+        }
+
+        &:last-child {
+            border-radius: 0 0 10px 10px;
+        }
+
+
+    }
+
+    &__sub-list {
+        max-height: 0;
+        transition: max-height 0.5s;
+        overflow: hidden;
+
+        &--active {
+            max-height: 20rem;
+            transition: max-height 0.5s;
+        }
+    }
+
+
+
+    &__sub-item-price {
+        font-weight: bold;
+    }
+}
