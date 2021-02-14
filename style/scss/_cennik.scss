@@ -1,18 +1,61 @@
+.c-header-section {
+    color: $secondary;
+    grid-column: span 12;
+
+    &__title {
+        @include center;
+    }
+}
+
+.l-pricer {
+    @include grid;
+    column-gap: 0;
+
+    &>* {
+        grid-column: span 12;
+    }
+
+    @media #{$small-tablet} {
+
+
+        &>* {
+            grid-column: span 6;
+
+        }
+    }
+
+    @media #{$wide} {
+        &>* {
+            grid-column: span 4;
+        }
+
+    }
+}
+
 .c-pricer {
+    width: 100%;
+    max-width: 50rem;
+    padding: 1rem;
+
+    color: black;
+
+    &__item {
+        padding-bottom: 2rem;
+    }
 
     &__title {
         font-size: 2.8rem;
+        color: $ortopediaColor;
     }
 
     &__item-title-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        background-color: $default;
+        background-color: $ortopediaColor;
         padding: 1rem;
         color: white;
         cursor: pointer;
-        margin-top: 2rem;
         transition: border-radius .5s;
 
         &--active {
@@ -20,9 +63,13 @@
         }
     }
 
-    &__item-title {
-        padding: 0;
+    &__item-title,
+    &__item-titles-wrapper {
         pointer-events: none;
+    }
+
+    &__item-titles {
+        padding: .5rem 0;
     }
 
     &__item-title-icon {
@@ -49,24 +96,36 @@
         &:last-child {
             border-radius: 0 0 10px 10px;
         }
-
-
     }
 
     &__sub-list {
         max-height: 0;
         transition: max-height 0.5s;
         overflow: hidden;
-
-        &--active {
-            max-height: 20rem;
-            transition: max-height 0.5s;
-        }
     }
-
-
 
     &__sub-item-price {
         font-weight: bold;
+    }
+
+    &:nth-child(3) {
+        .c-pricer__item-title-wrapper {
+            background-color: $regeneracjaColor;
+        }
+
+        .c-pricer__title {
+            color: $regeneracjaColor;
+        }
+    }
+
+    &:nth-child(2) {
+
+        .c-pricer__item-title-wrapper {
+            background-color: $default;
+        }
+
+        .c-pricer__title {
+            color: $default;
+        }
     }
 }

@@ -548,6 +548,18 @@ p {
           transform: translateX(0);
 }
 
+#cookiesEU-box {
+  position: fixed !important;
+  bottom: 20px;
+  border-radius: 10px;
+}
+
+.cookiesEU-text {
+  bottom: 0;
+  background-color: transparent;
+  color: #666;
+}
+
 .c-cards {
   display: -ms-grid;
   display: grid;
@@ -701,77 +713,6 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.l-doctors {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  justify-items: center;
-  gap: 3rem;
-}
-
-.l-doctors > * {
-  grid-column: span 12;
-}
-
-@media (min-width: 768px) {
-  .l-doctors {
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-  }
-  .l-doctors > * {
-    grid-column: span 6;
-  }
-}
-
-@media (min-width: 1024px) {
-  .l-doctors {
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-  }
-  .l-doctors > * {
-    grid-column: span 4;
-  }
-}
-
-@media (min-width: 1350px) {
-  .l-doctors {
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-  }
-  .l-doctors > * {
-    grid-column: span 3;
-  }
-}
-
-@media (min-width: 1024px) {
-  .l-doctors {
-    padding: 0 10%;
-  }
-}
-
-.c-doctor {
-  width: 100%;
-  max-width: 40rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.c-doctor__img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  height: 40rem;
-}
-
-.c-doctor__more {
-  padding: 2rem;
 }
 
 .l-opinions {

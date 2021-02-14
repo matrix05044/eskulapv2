@@ -215,7 +215,6 @@
     height: 100%;
     width: 100vw;
     overflow: hidden;
-    // z-index: 105;
 
 
     &:nth-child(2) {
@@ -248,7 +247,7 @@
     &:nth-child(3) {
         .c-header-section__title {
             font-size: calc(30px + (90 - 30) * ((100vw - 300px) / (1600 - 300)));
-            color: #650008;
+            color: $regeneracjaColor;
         }
 
         @media #{$small-tablet} {
@@ -273,7 +272,7 @@
     &__title {
         font-size: calc(30px + (100 - 30) * ((100vw - 300px) / (1600 - 300)));
         font-weight: bold;
-        color: #002751;
+        color: $ortopediaColor;
         letter-spacing: .7rem;
         z-index: 5;
         text-align: center;
@@ -361,7 +360,7 @@
 }
 
 .c-phone-wrapper {
-    background-color: #650008;
+    background-color: $regeneracjaColor;
     width: 100%;
     height: 3rem;
     z-index: 10;
@@ -418,4 +417,17 @@
 
 .bg-menu--active {
     transform: translateX(0);
+}
+
+#cookiesEU-box {
+    position: fixed !important;
+    bottom: 20px;
+    border-radius: 10px;
+}
+
+.cookiesEU-text {
+    bottom: 0;
+    background-color: transparent;
+    color: $default;
+
 }

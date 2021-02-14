@@ -20,6 +20,7 @@ function slider(wrapper, wapperItem, counter, time) {
   const swapLeft = (counter) => {
     wrapper.style.transform = `translate(-${offset}px)`;
     offset = offset + wapperItem[0].offsetWidth;
+    fadeTitle();
   };
 
   const swapRight = () => {
@@ -46,10 +47,10 @@ function slider(wrapper, wapperItem, counter, time) {
     setInterval(changing, time);
   };
 
-  sliding();
+  // sliding();
 }
 
-slider(wrapperLeyout, wrapperItem, counter1, 5000);
+slider(wrapperLeyout, wrapperItem, counter1, 1000);
 slider(opinionWrapper, opinionElements, counter2, 10000);
 
 const hamburger = document.querySelector('.c-hamburger');
