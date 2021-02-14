@@ -17,13 +17,12 @@ let counter1 = 1,
 function slider(wrapper, wapperItem, counter, time) {
   let offset = wapperItem[0].offsetWidth;
 
-  const swapLeft = (counter) => {
+  const swapLeft = () => {
     wrapper.style.transform = `translate(-${offset}px)`;
     offset = offset + wapperItem[0].offsetWidth;
-    fadeTitle();
   };
 
-  const swapRight = () => {
+  const swapRight = (counter) => {
     wrapper.style.transform = `translate(-${offset}px)`;
     offset = offset - wapperItem[0].offsetWidth;
   };
@@ -69,5 +68,3 @@ const moveMenu = () => {
 
 bg.addEventListener('click', moveMenu, false);
 hamburger.addEventListener('click', moveMenu, false);
-
-console.log('xd');
