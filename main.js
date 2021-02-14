@@ -47,10 +47,10 @@ function slider(wrapper, wapperItem, counter, time) {
     setInterval(changing, time);
   };
 
-  // sliding();
+  sliding();
 }
 
-slider(wrapperLeyout, wrapperItem, counter1, 1000);
+slider(wrapperLeyout, wrapperItem, counter1, 7000);
 slider(opinionWrapper, opinionElements, counter2, 10000);
 
 const hamburger = document.querySelector('.c-hamburger');
