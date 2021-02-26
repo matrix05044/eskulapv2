@@ -1,6 +1,5 @@
 .c-nav {
   width: 100%;
-  padding-top: 1rem;
   position: relative;
 }
 
@@ -31,6 +30,16 @@
     width: 100%;
     padding: 2rem 1rem;
     color: #666;
+  }
+}
+
+.c-menu-nav__link--active {
+  border-bottom: 1px solid #666;
+}
+
+@media (min-width: 1024px) {
+  .c-menu-nav__link:hover {
+    border-bottom: 1px solid #666;
   }
 }
 

@@ -68,3 +68,7 @@ const moveMenu = () => {
 
 bg.addEventListener('click', moveMenu, false);
 hamburger.addEventListener('click', moveMenu, false);
+
+baguetteBox.run('.l-gallery', {
+  // Custom options
+});
