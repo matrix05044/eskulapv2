@@ -35,6 +35,12 @@
             background-repeat: no-repeat;
         }
 
+        &:nth-child(5) {
+            background: url('./../../assets/pic2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
 
     }
 
@@ -78,6 +84,14 @@
             -webkit-line-clamp: unset;
 
 
+        }
+    }
+
+    @media #{$desktop} {
+        grid-template-columns: repeat(10, 1fr);
+
+        &>* {
+            grid-column: span 2;
         }
     }
 }

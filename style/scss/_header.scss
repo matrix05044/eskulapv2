@@ -14,9 +14,13 @@
     align-items: center;
     width: 100%;
 
+
     &__img {
         width: 100%;
+    }
 
+    @media #{$laptop} {
+        background-color: white;
     }
 }
 
@@ -79,21 +83,32 @@
 .c-menu-nav {
     font-size: 2rem;
     letter-spacing: 0.2rem;
-    height: 100%;
+
+    color: $default;
 
 
     &__item {
         padding: 1.5rem 0;
         white-space: nowrap;
-    }
 
-    &__link {
-        padding: 1rem 0;
+        &:nth-child(3) {
+            position: relative;
 
-        &--active {
-            border-bottom: 1px solid white;
+            &:hover>ul {
+                max-height: calc(75px * 4);
+            }
         }
     }
+
+    &__sub-item {
+        display: none;
+    }
+
+    &__icon {
+        display: none !important;
+    }
+
+
 
     @media (max-height: 490px) {
         font-size: 1rem;
@@ -102,16 +117,46 @@
     @media #{$laptop} {
         display: flex;
         justify-content: space-between;
-        font-size: .9rem;
+        font-size: 1.2rem;
         padding: 0 3rem;
-
 
         &__link {
             padding: 1rem;
 
             &:hover {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid $default;
             }
+        }
+
+        &__link {
+            padding: 1rem 0;
+
+            &--active {
+                border-bottom: 1px solid $default;
+            }
+        }
+
+        &__sub-item {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            transform: translateX(-30%);
+            background-color: white;
+            color: $default;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+            z-index: 100;
+        }
+
+        &__icon {
+            display: inline !important;
+        }
+
+        &__sub-item-link {
+            padding: 2rem;
+            margin-top: 2rem;
         }
     }
 
@@ -120,11 +165,25 @@
     }
 }
 
+.c-most-popular {
+    height: 50%;
+    padding: 5rem 0;
+
+    &__item {
+        padding: 2rem;
+        text-align: start;
+    }
+
+    @media #{$laptop} {
+        display: none;
+    }
+}
+
 .c-contact-ham {
     display: flex;
     justify-content: space-between;
-    margin-top: -10rem;
     font-size: 1rem;
+
 
     @media #{$laptop} {
         display: none;
@@ -145,6 +204,7 @@
 
     &--active {
         transform: translate(-25rem);
+
     }
 
     &__box {
@@ -183,6 +243,7 @@
 
     &__inner--active::before {
         transform: translateY(10px) rotate(-45deg);
+
     }
 
     &__inner::after {
@@ -191,6 +252,7 @@
 
     &__inner--active::after {
         transform: translateY(-10px) rotate(45deg);
+        background-color: white;
     }
 
     @media #{$laptop} {
@@ -276,6 +338,7 @@
         letter-spacing: .7rem;
         z-index: 5;
         text-align: center;
+
     }
 
     &__img-wrapper {

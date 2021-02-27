@@ -111,6 +111,12 @@ p {
   width: 100%;
 }
 
+@media (min-width: 1024px) {
+  .c-nav {
+    background-color: white;
+  }
+}
+
 .c-menu {
   position: absolute;
   width: 25rem;
@@ -183,7 +189,7 @@ p {
 .c-menu-nav {
   font-size: 2rem;
   letter-spacing: 0.2rem;
-  height: 100%;
+  color: #666;
 }
 
 .c-menu-nav__item {
@@ -191,12 +197,20 @@ p {
   white-space: nowrap;
 }
 
-.c-menu-nav__link {
-  padding: 1rem 0;
+.c-menu-nav__item:nth-child(3) {
+  position: relative;
 }
 
-.c-menu-nav__link--active {
-  border-bottom: 1px solid white;
+.c-menu-nav__item:nth-child(3):hover > ul {
+  max-height: calc(75px * 4);
+}
+
+.c-menu-nav__sub-item {
+  display: none;
+}
+
+.c-menu-nav__icon {
+  display: none !important;
 }
 
 @media (max-height: 490px) {
@@ -213,20 +227,69 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-size: .9rem;
+    font-size: 1.2rem;
     padding: 0 3rem;
   }
   .c-menu-nav__link {
     padding: 1rem;
   }
   .c-menu-nav__link:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #666;
+  }
+  .c-menu-nav__link {
+    padding: 1rem 0;
+  }
+  .c-menu-nav__link--active {
+    border-bottom: 1px solid #666;
+  }
+  .c-menu-nav__sub-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+    background-color: white;
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+    z-index: 100;
+  }
+  .c-menu-nav__icon {
+    display: inline !important;
+  }
+  .c-menu-nav__sub-item-link {
+    padding: 2rem;
+    margin-top: 2rem;
   }
 }
 
 @media (min-width: 1350px) {
   .c-menu-nav {
     padding: 0 10% 0 20%;
+  }
+}
+
+.c-most-popular {
+  height: 50%;
+  padding: 5rem 0;
+}
+
+.c-most-popular__item {
+  padding: 2rem;
+  text-align: start;
+}
+
+@media (min-width: 1024px) {
+  .c-most-popular {
+    display: none;
   }
 }
 
@@ -237,7 +300,6 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: -10rem;
   font-size: 1rem;
 }
 
@@ -320,6 +382,7 @@ p {
 .c-hamburger__inner--active::after {
   -webkit-transform: translateY(-10px) rotate(45deg);
           transform: translateY(-10px) rotate(45deg);
+  background-color: white;
 }
 
 @media (min-width: 1024px) {
@@ -672,6 +735,12 @@ p {
   background-repeat: no-repeat;
 }
 
+.c-cards__card:nth-child(5) {
+  background: url("./../../assets/pic2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .c-cards__more {
   position: absolute;
   cursor: pointer;
@@ -713,9 +782,20 @@ p {
   }
 }
 
+@media (min-width: 1600px) {
+  .c-cards {
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+  }
+  .c-cards > * {
+    grid-column: span 2;
+  }
+}
+
 .c-gallery {
   text-align: center;
   line-height: 0;
+  padding: 0 7%;
   -webkit-column-count: 1;
   -webkit-column-gap: 0px;
   -moz-column-count: 1;
@@ -725,10 +805,18 @@ p {
 }
 
 .c-gallery__img {
-  width: 100% !important;
-  max-width: 30rem;
-  height: auto !important;
-  padding: 1rem;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.c-gallery__img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 @media (min-width: 480px) {
@@ -759,7 +847,7 @@ p {
   }
 }
 
-@media (min-width: 1351px) {
+@media (min-width: 1600px) {
   .c-gallery {
     -webkit-column-count: 6;
     column-count: 6;
@@ -933,6 +1021,8 @@ p {
   }
   .l-footer > *:last-child {
     grid-column: span 4;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 

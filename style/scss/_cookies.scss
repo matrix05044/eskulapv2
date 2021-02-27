@@ -1,0 +1,17 @@
+.c-header-section {
+
+    &__title {
+
+        font-size: calc(24px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
+
+    }
+}
+
+.c-cookies {
+    padding: 2rem 10%;
+
+    &__item {
+        padding: 1.5rem 0;
+        max-width: 100ch;
+    }
+}

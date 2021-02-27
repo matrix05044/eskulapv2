@@ -1,6 +1,5 @@
 .c-nav {
     width: 100%;
-
     position: relative;
 }
 
@@ -29,6 +28,7 @@
         width: 100%;
         padding: 2rem 1rem;
         color: $default;
+        overflow: visible;
     }
 }
 
@@ -55,11 +55,17 @@
 
 .c-header-section {
 
+    padding: 0;
+    width: 100%;
 
     &__title {
         color: $secondary;
         font-size: calc(50px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
         margin: 2rem 0;
+    }
+
+    @media #{$laptop} {
+        padding: 0;
     }
 }
 

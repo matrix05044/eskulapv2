@@ -32,6 +32,7 @@
 
             &:last-child {
                 grid-column: span 4;
+                justify-self: end;
             }
         }
     }
