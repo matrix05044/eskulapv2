@@ -1,7 +1,8 @@
 .c-about {
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    margin-bottom: 5rem;
 
     &__img-wrapper {
         background: url('./../../assets/eskulap.jpg');
@@ -11,20 +12,54 @@
         min-height: 35rem;
         display: none;
         position: relative;
-
     }
 
     &__img-more {
         position: absolute;
         bottom: 0;
         padding: 2rem;
-        background-color: rgba($color: #666, $alpha: 0.9);
+        background-color: rgba($color: $default, $alpha: 0.8);
         width: 100%;
         color: white;
     }
 
     &__text {
         padding: 2%;
+        max-width: 60ch;
+        text-align: justify;
+    }
+
+    &:nth-child(3) {
+        .c-about__img-wrapper {
+            background: url('./../../assets/gallery8.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .c-about__img-more {
+            background-color: rgba($color: $ortopediaColor, $alpha: 0.8);
+        }
+    }
+
+    &:nth-child(4) {
+        .c-about__img-wrapper {
+            background: url('./../../assets/about2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .c-about__img-more {
+            background-color: rgba($color: $regeneracjaColor, $alpha: 0.8);
+        }
+    }
+
+    &:nth-child(2n) {
+
+        @media #{$laptop} {
+            .c-about__text {
+                order: -2;
+            }
+        }
     }
 
     @media #{$laptop} {
@@ -37,6 +72,7 @@
 
         &__text {
             width: 70%;
+            max-width: 80ch;
         }
     }
 }

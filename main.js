@@ -49,8 +49,8 @@ function slider(wrapper, wapperItem, counter, time) {
   sliding();
 }
 
-slider(wrapperLeyout, wrapperItem, counter1, 7000);
-slider(opinionWrapper, opinionElements, counter2, 10000);
+// slider(wrapperLeyout, wrapperItem, counter1, 7000);
+// slider(opinionWrapper, opinionElements, counter2, 10000);
 
 const hamburger = document.querySelector('.c-hamburger');
 const menu = hamburger.nextElementSibling;
@@ -69,6 +69,22 @@ const moveMenu = () => {
 bg.addEventListener('click', moveMenu, false);
 hamburger.addEventListener('click', moveMenu, false);
 
-baguetteBox.run('.l-gallery', {
-  // Custom options
+baguetteBox.run('.l-gallery', {});
+
+const swiper = new Swiper('.swiper-container', {
+  loop: true,
+
+  autoplay: {
+    delay: 5000,
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });

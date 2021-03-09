@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style/css/baguetteBox.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/131d487908.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="//ciasteczka.eu/cookiesEU-latest.min.js"></script>
@@ -42,7 +44,7 @@
                     <a href="https://www.instagram.com/laser_fotona4d_mosina/" class="c-socials__link">
                         <li class="c-socials__social"><i class="fab fa-instagram"></i></li>
                     </a>
-                    <a href="eskulap.mosina@gmail.com" class="c-socials__link">
+                    <a href="mailto:fotona4d@gmail.com.com" class="c-socials__link">
                         <li class="c-socials__social"><i class="fas fa-envelope"></i></li>
                     </a>
                 </ul>
@@ -112,17 +114,22 @@
                     </li>
                 </ul>
                 <ul class="c-contact-ham">
-                    <li class="c-contact-ham__item">+48 516 516 112</li>
-                    <li class="c-contact-ham__item">fotona4d@gmail.com</li>
+                    <a href="tel:+48 516 516 112">
+                        <li class="c-contact-ham__item">+48 516 516 112</li>
+                    </a>
+                    <a href="mailto:fotona4d@gmail.com">
+                        <li class="c-contact-ham__item">fotona4d@gmail.com</li>
+                    </a>
                 </ul>
             </div>
         </nav>
         <div class="c-phone-wrapper">
-            <div class="c-phone-wrapper__phone">
-                <i class="fas fa-phone c-phone-wrappper__icon"></i>
-                </i>
-                <p class="c-phone-wrapper__number">+48 516 516 112</p>
-            </div>
+            <a href="tel:+48 516 516 112">
+                <div class="c-phone-wrapper__phone">
+                    <i class="fas fa-phone c-phone-wrappper__icon"></i></i>
+                    <p class="c-phone-wrapper__number">+48 516 516 112</p>
+                </div>
+            </a>
             <ul class="c-social-list">
                 <a href="https://www.facebook.com/eskulap.mosina" class="c-social-list__link">
                     <li class="c-social-list__social"><i class="fab fa-facebook-square"></i></li>
@@ -130,138 +137,142 @@
                 <a href="https://www.instagram.com/laser_fotona4d_mosina/" class="c-social-list__link">
                     <li class="c-social-list__social"><i class="fab fa-instagram"></i></li>
                 </a>
-                <a href="eskulap.mosina@gmail.com" class="c-social-list__link">
+                <a href="mailto:fotona4d@gmail.com" class="c-social-list__link">
                     <li class="c-social-list__social"><i class="fas fa-envelope"></i></li>
                 </a>
             </ul>
         </div>
-        <div class="l-header-section-wrapper">
-            <div class="c-header-section">
-                <h1 class="c-header-section__title">ORTOPEDIA
-                </h1>
-                <ul class="c-header-list">
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Stawy</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Zwyrodnenia</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Stawy zapalne</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Biodra</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Kolana</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Artroza</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Łokcie</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Mięśnie</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Barki</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Ścięgna</li>
-                    </a>
-                </ul>
-                <div class="c-header-section__img-wrapper">
-                    <img class="c-header-section__img" sizes="(max-width: 1666px) 100vw, 1666px" srcset="
-assets/clem-onojeghuo-n6gnCa77Urc-unsplash_ifa3v1_c_scale,w_330.png 330w,
-assets/clem-onojeghuo-n6gnCa77Urc-unsplash_ifa3v1_c_scale,w_934.png 934w,
-assets/clem-onojeghuo-n6gnCa77Urc-unsplash_ifa3v1_c_scale,w_1366.png 1366w,
-assets/clem-onojeghuo-n6gnCa77Urc-unsplash_ifa3v1_c_scale,w_1666.png 1666w"
-                        src="clem-onojeghuo-n6gnCa77Urc-unsplash_ifa3v1_c_scale,w_1666.png" alt="Ćwicząca kobieta">
+        <div class="swiper-container">
+            <div class="l-header-section-wrapper swiper-wrapper">
+                <div class="c-header-section swiper-slide">
+                    <h1 class="c-header-section__title">ORTOPEDIA
+                    </h1>
+                    <ul class="c-header-list">
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Stawy</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Zwyrodnenia</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Stawy zapalne</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Biodra</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Kolana</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Artroza</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Łokcie</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Mięśnie</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Barki</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Ścięgna</li>
+                        </a>
+                    </ul>
+                    <div class="c-header-section__img-wrapper">
+                        <img class="c-header-section__img" sizes="(max-width: 1203px) 100vw, 1203px" srcset="
+assets/header-bg1_e89kur_c_scale,w_330.png 330w,
+assets/header-bg1_e89kur_c_scale,w_726.png 726w,
+assets/header-bg1_e89kur_c_scale,w_1022.png 1022w,
+assets/header-bg1_e89kur_c_scale,w_1203.png 1203w" src="header-bg1_e89kur_c_scale,w_1203.png" alt="Ćwiczący mężczyzna">
+                    </div>
                 </div>
-            </div>
-            <div class="c-header-section">
-                <h1 class="c-header-section__title">LASEROTERAPIA
-                </h1>
-                <ul class="c-header-list">
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Redukcja przebarwień</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Leczenie chrapania</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Zamykanie naczynek "Pajączków"</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Usuwanie kurzajek</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Redukcja blizn</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Fotoodmładzanie</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Endolifting</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Redukcja rozstępów</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Peeling</li>
-                    </a>
-                </ul>
-                <div class="c-header-section__img-wrapper">
-                    <img class="c-header-section__img" sizes="(max-width: 768px) 100vw, 768px" srcset="
+                <div class="c-header-section c-header-section--second swiper-slide">
+                    <h1 class="c-header-section__title">LASEROTERAPIA
+                    </h1>
+                    <ul class="c-header-list">
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Redukcja przebarwień</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Leczenie chrapania</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Zamykanie naczynek "Pajączków"</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Usuwanie kurzajek</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Redukcja blizn</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Fotoodmładzanie</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Endolifting</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Redukcja rozstępów</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Peeling</li>
+                        </a>
+                    </ul>
+                    <div class="c-header-section__img-wrapper">
+                        <img class="c-header-section__img" sizes="(max-width: 768px) 100vw, 768px" srcset="
 assets/pexels-photo-1036623_kebkpg_c_scale,w_350.png 350w,
 assets/pexels-photo-1036623_kebkpg_c_scale,w_517.png 517w,
 assets/pexels-photo-1036623_kebkpg_c_scale,w_650.png 650w,
 assets/pexels-photo-1036623_kebkpg_c_scale,w_768.png 768w" src="pexels-photo-1036623_kebkpg_c_scale,w_768.png" alt="">
+                    </div>
+                </div>
+                <div class="c-header-section c-header-section--third swiper-slide">
+                    <h1 class="c-header-section__title">PIELĘGNACJA SKÓRY
+                    </h1>
+                    <ul class="c-header-list">
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Twarz</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Zmarszczki</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Regeneracja po zabiegach</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Kurze łapki</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Bruzdy</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Odmładzanie szyi i dekoltu</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Zabiegi przeciwstarzeniowe</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Włosy</li>
+                        </a>
+                        <a href="" class="c-header-list__link">
+                            <li class="c-header-list__item">Nos</li>
+                        </a>
+                    </ul>
+                    <div class="c-header-section__img-wrapper">
+                        <img class="c-header-section__img" sizes="(max-width: 1860px) 100vw, 1860px" srcset="
+assets/header-bg_gvyu3n_c_scale,w_330.png 330w,
+assets/header-bg_gvyu3n_c_scale,w_1866.png 1866w,
+assets/header-bg_gvyu3n_c_scale,w_1888.png 1888w,
+assets/header-bg_gvyu3n_c_scale,w_1920.png 1920w" src="assets/header-bg_gvyu3n_c_scale,w_1920.png" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="c-header-section">
-                <h1 class="c-header-section__title">PIELĘGNACJA SKÓRY
-                </h1>
-                <ul class="c-header-list">
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Twarz</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Zmarszczki</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Regeneracja po zabiegach</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Kurze łapki</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Bruzdy</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Odmładzanie szyi i dekoltu</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Zabiegi przeciwstarzeniowe</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Włosy</li>
-                    </a>
-                    <a href="" class="c-header-list__link">
-                        <li class="c-header-list__item">Nos</li>
-                    </a>
-                </ul>
-                <div class="c-header-section__img-wrapper">
-                    <img class="c-header-section__img" sizes="(max-width: 1860px) 100vw, 1860px" srcset="
-assets/S_wkkt5j_c_scale,w_350.png 350w,
-assets/S_wkkt5j_c_scale,w_1091.png 1091w,
-assets/S_wkkt5j_c_scale,w_1492.png 1492w,
-assets/S_wkkt5j_c_scale,w_1860.png 1860w" src="S_wkkt5j_c_scale,w_1860.png" alt="">
-                </div>
-            </div>
-        </div>
 
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
     </header>
     <main class="l-main">
         <section class="l-offert">
@@ -309,18 +320,8 @@ assets/S_wkkt5j_c_scale,w_1860.png 1860w" src="S_wkkt5j_c_scale,w_1860.png" alt=
         <section class="l-gallery">
             <h2 class="offert-title">GALERIA</h2>
             <div class="c-gallery">
-                <a class="c-gallery__link" href="./assets/gallery1.jpg">
-                    <img class="c-gallery__img" src="./assets/mingallery1.jpg" alt="First image">
-                </a>
-                <a class="c-gallery__link" href="./assets/gallery2.jpg">
-                    <img class="c-gallery__img" src="./assets/mingallery2.jpg" alt="First image">
-                </a>
-                <a class="c-gallery__link" href="./assets/gallery3.jpg">
-                    <img class="c-gallery__img" src="./assets/mingallery3.jpg" alt="First image">
-                </a>
-                <a class="c-gallery__link" href="./assets/gallery4.jpg">
-                    <img class="c-gallery__img" src="./assets/mingallery4.jpg" alt="First image">
-                </a>
+
+
                 <a class="c-gallery__link" href="./assets/gallery5.jpg">
                     <img class="c-gallery__img" src="./assets/mingallery5.jpg" alt="First image">
                 </a>
@@ -563,14 +564,22 @@ assets/S_wkkt5j_c_scale,w_1860.png 1860w" src="S_wkkt5j_c_scale,w_1860.png" alt=
         </section>
         <section class="l-contact">
             <h2 class="contact-title">ZOSTAŃMY W KONTAKCIE</h2>
+
+
             <div class="c-contact">
-                <p class="c-contact__call">Zadzwoń</p>
-                <p class="c-contact__number">+48 516 516 112</p>
+                <a href="tel:+48 516 516 112">
+                    <p class="c-contact__call">Zadzwoń</p>
+                    <p class="c-contact__number">+48 516 516 112</p>
+                </a>
             </div>
+
             <div class="c-contact">
-                <p class="c-contact__write">Napisz</p>
-                <p class="c-contact__email">fotona4d@gmail.com</p>
+                <a href="mailto:fotona4d@gmail.com">
+                    <p class="c-contact__write">Napisz</p>
+                    <p class="c-contact__email">fotona4d@gmail.com</p>
+                </a>
             </div>
+
             <div class="c-contact">
                 <p class="c-contact__visit">Odwiedź nas</p>
                 <p class="c-contact__place">Mosina, ul Wawrzyniaka 13</p>
@@ -618,12 +627,16 @@ assets/S_wkkt5j_c_scale,w_1860.png 1860w" src="S_wkkt5j_c_scale,w_1860.png" alt=
             <li class="c-nav-adress__item"><i class="fas fa-map-marker-alt c-nav-adress__icon"></i>62-050 Mosina ul.
                 Wawrzyniaka 13
             </li>
-            <li class="c-nav-adress__item"><i class="fas fa-phone c-nav-adress__icon"></i>
-                +48 516 516 112
-            </li>
-            <li class="c-nav-adress__item"><i class="fas fa-envelope c-nav-adress__icon"></i>
-                fotona4d@gmail.com
-            </li>
+            <a href="tel:+48 516 516 112">
+                <li class="c-nav-adress__item"><i class="fas fa-phone c-nav-adress__icon"></i>
+                    +48 516 516 112
+                </li>
+            </a>
+            <a href="mailto:fotona4d@gmail.com">
+                <li class="c-nav-adress__item"><i class="fas fa-envelope c-nav-adress__icon"></i>
+                    fotona4d@gmail.com
+                </li>
+            </a>
         </ul>
         <ul class="c-socials-nav">
             <a href="https://www.facebook.com/eskulap.mosina" class="c-socials-nav__link">
@@ -632,14 +645,17 @@ assets/S_wkkt5j_c_scale,w_1860.png 1860w" src="S_wkkt5j_c_scale,w_1860.png" alt=
             <a href="https://www.instagram.com/laser_fotona4d_mosina/" class="c-socials-nav__link">
                 <li class="c-socials-nav__social"><i class="fab fa-instagram c-socials-nav__icon"></i></li>
             </a>
-            <a href="eskulap.mosina@gmail.com" class="c-socials-nav__link">
+            <a href="mailto:fotona4d@gmail.com" class="c-socials-nav__link">
                 <li class="c-socials-nav__social"><i class="fas fa-envelope c-socials-nav__icon"></i></li>
             </a>
         </ul>
     </footer>
 
     <script src="baguetteBox.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+
 
 </body>
 

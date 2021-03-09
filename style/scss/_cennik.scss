@@ -39,93 +39,78 @@
 
     color: black;
 
-    &__item {
-        padding-bottom: 2rem;
-    }
-
     &__title {
         font-size: 2.8rem;
         color: $ortopediaColor;
     }
 
-    &__item-title-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        background-color: $ortopediaColor;
-        padding: 1rem;
-        color: white;
-        cursor: pointer;
-        transition: border-radius .5s;
-
-        &--active {
-            border-radius: 10px 10px 0 0;
-        }
-    }
-
-    &__item-title,
-    &__item-titles-wrapper {
-        pointer-events: none;
-    }
 
     &__item-titles {
         padding: .5rem 0;
     }
 
-    &__item-title-icon {
-        transition: transform 0.5s;
-        pointer-events: none;
-
-        &--active {
-            transform: rotate(180deg);
-        }
-    }
 
     &__sub-item {
         padding: 1rem 1rem;
         font-size: 1.2rem;
-        background-color: rgb(219, 219, 219);
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
+
+        background-color: rgba($color: $ortopediaColor, $alpha: .6);
 
         &:nth-child(2n) {
-            background-color: rgb(161, 161, 161);
+            background-color: rgba($color: $ortopediaColor, $alpha: .2);
         }
 
-        &:last-child {
-            border-radius: 0 0 10px 10px;
-        }
     }
 
-    &__sub-list {
-        max-height: 0;
-        transition: max-height 0.5s;
-        overflow: hidden;
+    &__item-title {
+        font-weight: normal;
+        max-width: 34ch;
     }
+
 
     &__sub-item-price {
         font-weight: bold;
-    }
+        width: 9ch;
 
-    &:nth-child(3) {
-        .c-pricer__item-title-wrapper {
-            background-color: $regeneracjaColor;
-        }
-
-        .c-pricer__title {
-            color: $regeneracjaColor;
-        }
     }
 
     &:nth-child(2) {
 
-        .c-pricer__item-title-wrapper {
-            background-color: $default;
+        .c-pricer__sub-item {
+            background-color: rgba($color: $default, $alpha: .2);
+
+            &:nth-child(2n) {
+                background-color: rgba($color: $default, $alpha: .6);
+            }
         }
 
         .c-pricer__title {
             color: $default;
         }
     }
+
+    &:nth-child(3) {
+        .c-pricer__sub-item {
+            background-color: rgba($color: $regeneracjaColor, $alpha: .4);
+        }
+
+        .c-pricer__title {
+            color: $regeneracjaColor;
+        }
+
+        .c-pricer__sub-item {
+            &:nth-child(2) {
+                margin-bottom: 4rem;
+            }
+
+            &:nth-child(4) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
 }
