@@ -73,11 +73,34 @@ baguetteBox.run('.l-gallery', {});
 
 const swiper = new Swiper('.swiper-container', {
   loop: true,
-
+  speed: 800,
   autoplay: {
     delay: 5000,
   },
-  // If we need pagination
+
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiperSecond = new Swiper('.swiper-container-second', {
+  loop: true,
+  speed: 500,
+  autoplay: {
+    delay: 5000,
+  },
+
   pagination: {
     el: '.swiper-pagination',
     clickable: true,

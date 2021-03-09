@@ -15,8 +15,13 @@
     width: 100%;
 
 
+    &__logo {
+        padding: 2rem;
+        justify-self: center;
+    }
+
     &__img {
-        width: 100%;
+        width: 15rem;
     }
 
     @media #{$laptop} {
@@ -285,7 +290,7 @@
     height: 100%;
     width: 100vw;
     overflow: hidden;
-
+    // transition: all 1s !important;
 
     &--second {
         .c-header-section__title {
@@ -437,14 +442,15 @@
     }
 }
 
-.swiper-pagination {
-    bottom: 1rem !important;
-    z-index: 100;
-}
 
 .swiper-button-prev,
 .swiper-button-next {
+    display: none !important;
     color: $default !important;
+
+    @media #{$laptop} {
+        display: flex !important;
+    }
 }
 
 .bg-menu {
