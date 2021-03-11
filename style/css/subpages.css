@@ -51,7 +51,7 @@
 
 .c-header-section__title {
   color: #424242;
-  font-size: calc(50px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(50px + (72 - 50) * ((100vw - 300px) / (1600 - 300)));
   margin: 2rem 0;
 }
 
@@ -320,7 +320,7 @@
   margin-bottom: 4rem;
 }
 
-.c-header-section__title {
+.c-header-section__title--cookies {
   font-size: calc(24px + (72 - 24) * ((100vw - 300px) / (1600 - 300)));
 }
 
