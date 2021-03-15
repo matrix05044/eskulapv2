@@ -504,6 +504,10 @@ p {
   margin-right: auto;
 }
 
+.c-header-section__btn {
+  margin-top: 1rem;
+}
+
 .c-header-section__img-wrapper {
   height: 100%;
   opacity: 30%;

@@ -357,6 +357,10 @@
         @include center;
     }
 
+    &__btn {
+        margin-top: 1rem;
+    }
+
     &__img-wrapper {
         height: 100%;
         opacity: 30%;

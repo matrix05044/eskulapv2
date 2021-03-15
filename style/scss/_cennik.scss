@@ -96,6 +96,11 @@
     &:nth-child(3) {
         .c-pricer__sub-item {
             background-color: rgba($color: $regeneracjaColor, $alpha: .4);
+
+            &:nth-child(2n) {
+                background-color: rgba($color: $regeneracjaColor, $alpha: .6);
+            }
+
         }
 
         .c-pricer__title {
